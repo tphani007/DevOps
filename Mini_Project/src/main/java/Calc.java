@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Calc
 {
-    public double factorial(int num)
+    public static double factorial(double num)
     {
         double result = 1;
         if(num==0)
@@ -12,6 +12,21 @@ public class Calc
             result *= i;
         }
         return result;
+    }
+
+    public static double square_root(double num)
+    {
+        return Math.sqrt(num);
+    }
+
+    public static double log_e(double num)
+    {
+        return Math.log(num);
+    }
+
+    public static double power(double x, double y)
+    {
+        return Math.pow(x,y);
     }
 
     public static void main(String[] args)
@@ -25,19 +40,19 @@ public class Calc
                 case (1):
                     System.out.print("Enter the number for square root: ");
                     double x = scan.nextDouble();
-                    System.out.println("The square root of " + x + " is " + Math.sqrt(x));
+                    System.out.println("The square root of " + x + " is " + square_root(x));
                     break;
 
                 case (2):
                     System.out.print("Enter the number for factorial: ");
                     double n = scan.nextDouble();
-                    System.out.println("The factorial of " + n + " is " );
+                    System.out.println("The factorial of " + n + " is " + factorial(n));
                     break;
 
                 case (3):
                     System.out.print("Enter the number for natural log: ");
                     double i = scan.nextDouble();
-                    System.out.println("The natural log of " + i + " is " + Math.log(i));
+                    System.out.println("The natural log of " + i + " is " + log_e(i));
                     break;
 
                 case (4):
@@ -45,7 +60,7 @@ public class Calc
                     double a = scan.nextDouble();
                     System.out.print("Enter the power for the exponent: ");
                     double b = scan.nextDouble();
-                    System.out.println("The result is " + Math.pow(a,b));
+                    System.out.println("The result is " + power(a,b));
                     break;
 
                 case (5):
