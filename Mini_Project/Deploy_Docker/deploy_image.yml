@@ -6,5 +6,5 @@
   tasks:
     - name: Pull DevOps Image
       docker_image:
-              name: grimscorcher/devops_calc:latest
+              name: grimscorcher/devops_calc
         source: pull 
