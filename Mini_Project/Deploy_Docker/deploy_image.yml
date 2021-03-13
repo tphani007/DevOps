@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of DevOps_calc
+  hosts: all
+  tasks:
+    - name: Pull DevOps Image
+      docker_image:
+        name: grimscorcher/devops_calc
+        source: pull 
