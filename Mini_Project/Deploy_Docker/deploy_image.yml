@@ -1,10 +1,11 @@
 ---
 - name: Pull docker image of DevOps_calc
-  hosts: all
+  hosts: local
+  connection: local
   vars:
     ansible_python_interpreter: /usr/bin/python
   tasks:
     - name: Pull DevOps Image
       docker_image:
-              name: grimscorcher/devops_calc
+        name: grimscorcher/devops_calc
         source: pull 
