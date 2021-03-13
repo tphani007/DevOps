@@ -1,1 +1,1 @@
-localhost anisble_user=grim
+localhost ansible_user=grim
