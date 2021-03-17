@@ -1,9 +1,14 @@
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Calc
 {
+    private static final Logger logger = LogManager.getLogger(Calc.class);
     public static double factorial(double num)
     {
+        logger.info("Verifying the input " + num);
         double result = 1;
         if(num==0)
             return 1;
@@ -16,16 +21,19 @@ public class Calc
 
     public static double square_root(double num)
     {
+        logger.info("Verifying the input " + num);
         return Math.sqrt(num);
     }
 
     public static double log_e(double num)
     {
+        logger.info("Verifying the input " + num);
         return Math.log(num);
     }
 
     public static double power(double x, double y)
     {
+        logger.info("Verifying the inputs " + x + " " + y);
         return Math.pow(x,y);
     }
 
